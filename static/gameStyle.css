@@ -1,0 +1,24 @@
+#sticks {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.stick {
+    width: 30px;
+    height: 100px;
+    background-color: brown;
+    margin: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+
+#playerTurn {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 20px;
+}

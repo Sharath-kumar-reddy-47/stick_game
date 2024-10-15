@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Stick Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='gameStyle.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <h1>Multiplayer Stick Game</h1>
+
+    <form id="joinForm">
+        <input type="text" id="username" placeholder="Enter your name" required>
+        <input type="text" id="room" placeholder="Room name" required>
+        <button type="submit">Join Game</button>
+    </form>
+
+    <div id="gameArea" style="display:none;">
+        <p id="playerTurn"></p>
+        <div id="sticks"></div>
+        <div id="message"></div>
+        <button id="pick1" style="display:none;">Pick 1 Stick</button>
+        <button id="pick2" style="display:none;">Pick 2 Sticks</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>
